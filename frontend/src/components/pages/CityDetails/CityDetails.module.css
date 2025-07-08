@@ -1,0 +1,83 @@
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.cityImage {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.cityImage:hover {
+  transform: scale(1.02);
+}
+
+.subTitle {
+  font-size: 3rem;
+  margin: 30px 0 40px;
+  text-align: center;
+  font-weight: 700;
+  color: #2c3e50;
+  letter-spacing: 1px;
+}
+
+.placesList {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 0;
+}
+
+.placeItem {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.placeItem:hover {
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.placeImage {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.placeName {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #34495e;
+}
+
+.placeDescription {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #666;
+  flex-grow: 1;
+}
+
+.loading {
+  text-align: center;
+  padding: 60px;
+  font-size: 1.25rem;
+  color: #777;
+  font-style: italic;
+}

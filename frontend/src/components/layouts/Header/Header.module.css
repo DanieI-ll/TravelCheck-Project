@@ -1,43 +1,54 @@
 .header {
-  background-color: #cf6513;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 0px 0px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
 .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 2rem;
-  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.navLogo {
-  font-weight: bold;
-  font-size: 1.5rem;
+.navLogo img {
+  width: 150px;
 }
 
 .hamburger {
   display: none;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   background: none;
   border: none;
   cursor: pointer;
 }
 
 .navLinks {
-  list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 25px;
+  list-style: none;
 }
 
 .navLinks li a {
   text-decoration: none;
-  color: #333;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #34495e;
+  transition: color 0.3s ease;
+}
+
+.navLinks li a:hover {
+  color: #1abc9c;
 }
 
 .active {
-  color: #007bff;
-  font-weight: bold;
+  color: #1abc9c;
+  border-bottom: 2px solid #1abc9c;
+  padding-bottom: 2px;
 }
 
 /* Responsive */
@@ -48,19 +59,18 @@
 
   .navLinks {
     position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: white;
+    top: 65px;
+    right: 30px;
+    background: #fff;
     flex-direction: column;
-    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     display: none;
-    gap: 1rem;
-    padding: 1rem 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
-  .navLinks.show {
+  .show {
     display: flex;
   }
 }

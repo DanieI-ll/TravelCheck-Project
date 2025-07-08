@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import logo from '../../../assets/travel-check-img.png';
 import styles from './Header.module.css';
 
 const Header = () => {
@@ -8,7 +9,9 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
-        <div className={styles.navLogo}>Logo</div>
+        <div className={styles.navLogo}>
+          <img src={logo} alt="Logo" />
+        </div>
 
         <button className={styles.hamburger} onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
           ☰
@@ -22,7 +25,7 @@ const Header = () => {
           </li>
           <li>
             <NavLink to="/cities" onClick={() => setIsOpen(false)} className={({ isActive }) => (isActive ? styles.active : '')}>
-              Browse Cities
+              Explore Cities
             </NavLink>
           </li>
           <li>
