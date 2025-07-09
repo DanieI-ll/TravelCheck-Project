@@ -35,3 +35,18 @@
   font-size: 1rem;
   line-height: 2;
 }
+
+.socials {
+  margin-top: 20px;
+}
+
+.socials a {
+  color: #ecf0f1;
+  margin: 0 10px;
+  font-size: 1.6rem;
+  transition: color 0.3s ease;
+}
+
+.socials a:hover {
+  color: #1abc9c;
+}

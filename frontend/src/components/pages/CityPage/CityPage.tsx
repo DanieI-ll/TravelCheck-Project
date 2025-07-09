@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Typewriter } from 'react-simple-typewriter';
 import styles from './CityPage.module.css';
 
 type City = {
@@ -24,7 +25,9 @@ const CityPage = () => {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Explore Cities</h1>
+      <h1 className={styles.title}>
+        <Typewriter words={['Choose City', 'Plan', 'Discover']} loop cursor cursorStyle="|" typeSpeed={70} deleteSpeed={50} delaySpeed={1500} />
+      </h1>
       <div className={styles.cardGrid}>
         {cities.map((city) => (
           <div key={city._id} className={styles.card} onClick={() => goToCityDetail(city._id)}>

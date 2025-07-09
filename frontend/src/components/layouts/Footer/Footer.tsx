@@ -5,17 +5,16 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
-
         <div className={styles.socials}>
-          <a href="https://github.com/kullanici-adin" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/DanieI-ll" target="_blank" rel="noopener noreferrer">
             <FaGithub />
           </a>
-          <a href="https://linkedin.com/in/kullanici-adin" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/daniel-bich-564649274/" target="_blank" rel="noopener noreferrer">
             <FaLinkedin />
           </a>
         </div>
 
-        <p className={styles.text}>© {new Date().getFullYear()} Travel Guide. All rights reserved.</p>
+        <p className={styles.text}>© {new Date().getFullYear()} TravelCheck. All rights reserved.</p>
       </div>
     </footer>
   );
