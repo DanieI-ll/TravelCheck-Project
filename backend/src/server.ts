@@ -17,21 +17,3 @@ const startServer = (): void => {
 }
 
 export default startServer;
-
-// await City.create({
-//   name: 'Köln',
-//   topPlaces: [
-//     {
-//       name: 'Kölner Dom',
-//       description: "Gotik tarzda inşa edilmiş, Almanya'nın en büyük katedrali.",
-//     },
-//     {
-//       name: 'Rheinpark',
-//       description: 'Ren Nehri kıyısında geniş bir park alanı, dinlenmek için ideal.',
-//     },
-//     {
-//       name: 'Ludwig Müzesi',
-//       description: 'Modern sanat koleksiyonlarıyla ünlü müze.',
-//     },
-//   ],
-// });
