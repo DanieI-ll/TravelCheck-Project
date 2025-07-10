@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import axios from 'axios';
 import styles from './CityDetails.module.css';
 
 type TopPlace = {
@@ -21,9 +22,12 @@ const CityDetails = () => {
 
   useEffect(() => {
     const fetchCity = async () => {
-      const res = await fetch(`/api/cities/${id}`);
-      const data = await res.json();
-      setCity(data);
+      try {
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/cities/${id}`);
+        setCity(res.data);
+      } catch (error) {
+        console.error('Error fetching city:', error);
+      }
     };
 
     fetchCity();

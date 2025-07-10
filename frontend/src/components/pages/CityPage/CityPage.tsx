@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Typewriter } from 'react-simple-typewriter';
+import axios from 'axios';
 import styles from './CityPage.module.css';
 
 type City = {
@@ -14,9 +15,16 @@ const CityPage = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch('/api/cities')
-      .then((res) => res.json())
-      .then(setCities);
+    const fetchCities = async () => {
+      try {
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/cities`);
+        setCities(res.data);
+      } catch (error) {
+        console.error('Error fetching cities:', error);
+      }
+    };
+
+    fetchCities();
   }, []);
 
   const goToCityDetail = (cityId: string) => {
